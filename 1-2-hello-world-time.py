@@ -1,5 +1,5 @@
 import asyncio
-import time 
+import time
 
 async def example(message):
     print(f"{time.ctime()} - start of :", message)
@@ -7,11 +7,12 @@ async def example(message):
     print(f"{time.ctime()} - end of :", message)
 
 async def main():
-    # Start coroutine twice
+    # Start coroutine twice (hopefully they start!)
     first_awaitable = example("First call")
-    second_awaitable = example("Second call")
-    # Wait for coroutines to finish
+    second_awaitable = example("Second all")
+    
+    # Wait for corountines to finish
     await first_awaitable
-    second_awaitable
+    await second_awaitable
 
 asyncio.run(main())
